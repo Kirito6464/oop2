@@ -11,6 +11,7 @@ def dish_recipes():
                 ingredients.append({'name': name, 'quantity': quantity, 'measure': measure})
             file.readline()
             cook_book[dish_name] = ingredients
+    file.close()
     return cook_book
 
 
@@ -24,3 +25,4 @@ def get_shop_list_by_dishes(dishes, person_count):
             else:
                 ingredient[name]['quantity'] += int(quantity) * person_count
     pprint(ingredient)
+
